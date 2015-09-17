@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include "libft.h"
+#include <stdlib.h>
 
 int main()
 {
-	const char b[50] = "Que volent mes fleche";
-	const char c[50] = "Que volent mes fleche";
-	int a;
 
-	a = ft_strcmp(b,c);
-
-	ft_putnbr(a);
+	//ft_putnbr(ft_isalnum(45));
+	printf("%s",ft_strdup(""));
 	return(0);
 }
