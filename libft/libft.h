@@ -56,4 +56,5 @@ void ft_putstr_fd(char const *s, int fd);
 void ft_putendl_fd(char const *s, int fd);
 void ft_putnbr_fd(int n,int fd);
 void ft_striter(char *s, void (*f)(char *));
+void ft_striteri(char *s, void (*f)(unsigned int, char *));
 #endif 
