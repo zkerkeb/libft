@@ -6,14 +6,14 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:22:08 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/23 17:22:18 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/11/23 21:57:20 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
-		free(*as);
-		*as = NULL;
+	free(*as);
+	*as = NULL;
 }
