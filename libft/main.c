@@ -11,13 +11,22 @@ char ft_sup(unsigned int a, char c)
 
 int main()
 {
-	char const s1[50] = "\t\t\n\t\t   "	;
-	//char const s2[50] = "def";
-	char *test;
+	char const s1[50] = "***salut****!**";
+	char **ace;
+	int i;
+
+	i = 0;
+	ace = ft_strsplit(s1, '*');
 	
-	test = ft_strtrim(s1);
-	
-	printf("%d",strcmp(test,"" ));
-	
+	while(ace || i <= 1)
+	{
+		ft_putstr(ace[i]);
+		ft_putchar('\n');
+		i++;
+	}
+
+
+
 	return(0);
 }
+
