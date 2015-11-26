@@ -6,7 +6,7 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 22:22:17 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/23 22:23:29 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/11/25 18:38:50 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		}
 		if (needle[j] == '\0')
 			return (char *)(&haystack[i - j]);
+		i = i - j + 1;
 		j = 0;
 	}
 	return (NULL);

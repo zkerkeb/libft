@@ -10,10 +10,14 @@ char ft_sup(unsigned int a, char c)
 }
 
 int main()
-{	
- 	const char c[4] = "ace";
-	char d[15] = "Victoire";
-      
-	printf("%zu",ft_strlcat(d,c,10));
+{
+	char const s1[50] = "\t\t\n\t\t   "	;
+	//char const s2[50] = "def";
+	char *test;
+	
+	test = ft_strtrim(s1);
+	
+	printf("%d",strcmp(test,"" ));
+	
 	return(0);
 }

@@ -5,27 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:57:48 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/23 16:57:52 by zkerkeb          ###   ########.fr       */
+/*   Created: 2015/11/26 15:10:32 by zkerkeb           #+#    #+#             */
+/*   Updated: 2015/11/26 15:10:34 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 
 void	ft_putnbr(int n)
 {
+	unsigned int	nb;
+	unsigned int	temp;
+
 	if (n < 0)
 	{
-		n = n * (-1);
-		ft_putchar('-');
+		nb = -n;
+		write(1, "-", 1);
 	}
-	if (n < 10)
+	else
+		nb = n;
+	if (nb < 10)
 	{
-		ft_putchar(n + '0');
+		temp = nb + '0';
+		write(1, &temp, 1);
 	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 22:11:18 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/23 22:12:38 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/11/26 16:17:11 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		count_words(const char *str, char c)
 		else
 			i++;
 	}
+	ft_putchar(i + 48);
 	return (nbr);
 }
 
@@ -82,8 +83,8 @@ char	**write_tab(const char *str, char **tab, char c, int i)
 		if (str[i] != '\0')
 			tmp++;
 	}
-	tmp++;
-	tab[tmp][j] = '\0';
+//	tmp++;
+//	tab[tmp][j] = '\0';
 	return (tab);
 }
 
@@ -91,9 +92,13 @@ char	**ft_strsplit(char const *s, char c)
 {
 	int		words;
 	char	**tab;
-
+	
 	words = count_words(s, c);
+	if (s == NULL || words == 0)
+		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (words + 1));
+	if(tab == NULL)
+		return (NULL);
 	word_malloc(s, tab, c);
 	write_tab(s, tab, c, 0);
 	return (tab);

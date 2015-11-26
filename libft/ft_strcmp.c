@@ -6,7 +6,7 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:21:14 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/23 20:35:52 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/11/25 21:57:22 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 		{
 			i++;
 		}
-		return (s1[i] - s2[i]);
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 	}
 	return (0);
 }
