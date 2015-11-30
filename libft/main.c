@@ -2,6 +2,8 @@
 #include "libft.h"
 #include <stdlib.h>
 
+void *ft_test(t_list *elem);
+
 char ft_sup(unsigned int a, char c)
 {
   a = a + 1;
@@ -9,24 +11,35 @@ char ft_sup(unsigned int a, char c)
   return(c);
 }
 
+
 int main()
 {
-	char const s1[50] = "***salut****!**";
-	char **ace;
-	int i;
+	t_list *list;
+	t_list *list2;
+	t_list *list3;	
+	void (*f)(t_list);
 
-	i = 0;
-	ace = ft_strsplit(s1, '*');
+	const char c[50] = "tonton";
 	
-	while(ace || i <= 1)
+	f = ft_test;
+	list = ft_lstnew(c, 50);
+
+
+
+	list2 = ft_lstnew("ta race", 50);				
+	
+	ft_lstadd(&list, list2);
+	list3 = ft_lstnew("ace",50);
+
+	ft_lstadd(&list, list3);
+	while(list)
 	{
-		ft_putstr(ace[i]);
-		ft_putchar('\n');
-		i++;
+		ft_putstr(list->content);
+		list = list->next;
 	}
-
-
-
+	
+	ft_lstiter(list3,f);
+		
 	return(0);
 }
 

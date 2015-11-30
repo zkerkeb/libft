@@ -6,13 +6,13 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:54:28 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/26 15:50:12 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/11/29 17:58:37 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_cnumber(int n)
+static int		ft_cnumber(int n)
 {
 	int			count;
 
