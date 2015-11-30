@@ -6,7 +6,7 @@
 #    By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 15:01:31 by zkerkeb           #+#    #+#              #
-#    Updated: 2015/11/28 18:58:18 by zkerkeb          ###   ########.fr        #
+#    Updated: 2015/11/30 16:30:54 by zkerkeb          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SRC=ft_putchar.c ft_putstr.c ft_tolower.c ft_toupper.c ft_strlen.c \
     ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_memdel.c \
     ft_strnew.c ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c \
     ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c \
-    ft_strsplit.c ft_itoa.c ft_putnbr_fd.c
+    ft_strsplit.c ft_itoa.c ft_putnbr_fd.c ft_lstadd.c ft_lstiter.c \
+	ft_lstmap.c ft_lstdel.c ft_lstdelone.c ft_lstnew.c
 
 OBJ= $(SRC:.c=.o)
 
