@@ -6,13 +6,13 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 22:11:18 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/30 21:47:37 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/12/01 22:20:13 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		count_words(const char *str, char c)
+static int		count_words(const char *str, char c)
 {
 	int	i;
 	int	nbr;
@@ -32,7 +32,7 @@ int		count_words(const char *str, char c)
 	return (nbr);
 }
 
-char	**word_malloc(const char *str, char **tab, char c)
+static char	**word_malloc(const char *str, char **tab, char c)
 {
 	int	i;
 	int	tmp;
@@ -60,7 +60,7 @@ char	**word_malloc(const char *str, char **tab, char c)
 	return (tab);
 }
 
-char	**write_tab(char **tab, char const *s, char c)
+static char	**write_tab(char **tab, char const *s, char c)
 {
 	int i;
 	int j;
