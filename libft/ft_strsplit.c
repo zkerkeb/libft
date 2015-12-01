@@ -6,7 +6,7 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 22:11:18 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/12/01 22:20:13 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/12/01 22:52:05 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int		count_words(const char *str, char c)
 	return (nbr);
 }
 
-static char	**word_malloc(const char *str, char **tab, char c)
+static char		**word_malloc(const char *str, char **tab, char c)
 {
 	int	i;
 	int	tmp;
@@ -60,7 +60,7 @@ static char	**word_malloc(const char *str, char **tab, char c)
 	return (tab);
 }
 
-static char	**write_tab(char **tab, char const *s, char c)
+static char		**write_tab(char **tab, char const *s, char c)
 {
 	int i;
 	int j;
@@ -89,7 +89,7 @@ static char	**write_tab(char **tab, char const *s, char c)
 	return (tab);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	int		words;
 	char	**tab;
