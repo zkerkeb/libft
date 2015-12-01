@@ -6,13 +6,28 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:47:50 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/30 23:18:45 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/12/01 18:08:25 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static char	*ft_trim(char *cpy, int st, int end, char const *s)
+{
+	int i;
+
+	i = 0;
+	while (st <= end)
+	{
+		cpy[i] = s[st];
+		i++;
+		st++;
+	}
+	cpy[i] = '\0';
+	return (cpy);
+}
+
+char		*ft_strtrim(char const *s)
 {
 	int		st;
 	int		end;
@@ -31,7 +46,7 @@ char	*ft_strtrim(char const *s)
 	cpy = (char *)malloc(sizeof(char) * (end - st + 1));
 	if (cpy && s)
 	{
-		ft_strncpy(cpy, (char const *)s + st, end - st + 1);
+		cpy = ft_trim(cpy, st, end, s);
 		return (cpy);
 	}
 	return (NULL);

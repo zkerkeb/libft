@@ -14,9 +14,10 @@ char ft_sup(unsigned int a, char c)
 
 int main()
 {
-	printf("%s", ft_strjoin("","boys"));
+	//char *r;
+	
+	printf("%s",ft_strtrim("Bonjour"));
 
-	printf("%d",strcmp("boys",ft_strjoin("","boys")));
 	return(0);
 }
 

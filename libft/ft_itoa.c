@@ -6,7 +6,7 @@
 /*   By: zkerkeb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:54:28 by zkerkeb           #+#    #+#             */
-/*   Updated: 2015/11/30 23:14:38 by zkerkeb          ###   ########.fr       */
+/*   Updated: 2015/12/01 16:47:49 by zkerkeb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ char			*ft_itoa(int n)
 	int		i;
 
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	if (n == 0)
-		return ("0");
+		return (ft_strdup("0"));
 	i = ft_cnumber(n);
 	str = (char *)malloc(sizeof(char) * (i + 1));
 	if (str == NULL)
@@ -54,6 +54,6 @@ char			*ft_itoa(int n)
 		str[i] = (n % 10) + 48;
 		n = n / 10;
 	}
-	free(str);
+	n = 0;
 	return (str);
 }
