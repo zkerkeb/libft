@@ -26,11 +26,9 @@ static int	ft_test(const char *s1, const char *s2, size_t c)
 
 char		*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	size_t j;
 	size_t i;
 
 	i = 0;
-	j = 0;
 	if (s2[0] == '\0' || s2 == 0)
 		return ((char *)s1);
 	while (s1[i] && i < n)
